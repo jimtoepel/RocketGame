@@ -15,6 +15,10 @@
 @property (nonatomic,weak) IBOutlet UILabel *bridgeIpLabel;
 @property (nonatomic,weak) IBOutlet UILabel *bridgeLastHeartbeatLabel;
 @property (nonatomic,weak) IBOutlet UIButton *randomLightsButton;
+@property (weak, nonatomic) IBOutlet UIButton *LandingLightsButton;
+@property (weak, nonatomic) IBOutlet UIButton *LaunchLightButton;
+@property (weak, nonatomic) IBOutlet UIProgressView *ProgressBar;
+
 
 @end
 
@@ -42,7 +46,6 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Find bridge" style:UIBarButtonItemStylePlain target:self action:@selector(findNewBridgeButtonAction)];
     
     self.navigationItem.title = @"QuickStart";
-    
     [self noLocalConnection];
 }
 
@@ -134,8 +137,78 @@
     }
 }
 
+
+
+- (IBAction)launchColoursOfConnectLights:(id)sender{
+    [self.randomLightsButton setEnabled:NO];
+    [self moveRocketUp];
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:240]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+            [self.randomLightsButton setEnabled:YES];
+        }];
+    }
+}
+
+
+- (IBAction)landingColoursOfConnectLights:(id)sender{
+    [self.randomLightsButton setEnabled:NO];
+    [self moveRocketDown];
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:15]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+            [self.randomLightsButton setEnabled:YES];
+        }];
+    }
+}
+
+
 - (void)findNewBridgeButtonAction{
     [UIAppDelegate searchForBridgeLocal];
+}
+
+
+-(void)moveRocketUp{
+    self.ProgressBar.progress = self.ProgressBar.progress + .1;
+    
+}
+
+-(void)moveRocketDown{
+    self.ProgressBar.progress = self.ProgressBar.progress - .1;
 }
 
 @end

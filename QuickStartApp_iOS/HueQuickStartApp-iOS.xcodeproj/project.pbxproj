@@ -27,6 +27,7 @@
 		877BF2DF1B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877BF2D61B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib */; };
 		877BF2E01B4BD4EC00118EF2 /* press_smartbridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 877BF2D81B4BD4EC00118EF2 /* press_smartbridge.png */; };
 		877BF2E11B4BD4EC00118EF2 /* press_smartbridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 877BF2D91B4BD4EC00118EF2 /* press_smartbridge@2x.png */; };
+		B1EF90F11D10C13A00468EE0 /* Rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B1EF90F01D10C13A00468EE0 /* Rocket.png */; };
 		F715240118337FD50033689C /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F71523F318337FD50033689C /* DDAbstractDatabaseLogger.m */; };
 		F715240218337FD50033689C /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F71523F518337FD50033689C /* DDASLLogger.m */; };
 		F715240318337FD50033689C /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F71523F718337FD50033689C /* DDFileLogger.m */; };
@@ -65,6 +66,7 @@
 		877BF2D61B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHBridgeSelectionViewController.xib; sourceTree = "<group>"; };
 		877BF2D81B4BD4EC00118EF2 /* press_smartbridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_smartbridge.png; sourceTree = "<group>"; };
 		877BF2D91B4BD4EC00118EF2 /* press_smartbridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press_smartbridge@2x.png"; sourceTree = "<group>"; };
+		B1EF90F01D10C13A00468EE0 /* Rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rocket.png; sourceTree = "<group>"; };
 		F71523F218337FD50033689C /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		F71523F318337FD50033689C /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		F71523F418337FD50033689C /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				4CCACFA2165692D5008E9D69 /* main.m */,
 				4CCACFA4165692D5008E9D69 /* HueQuickStartApp-iOS-Prefix.pch */,
 				4CCACFA8165692D5008E9D69 /* Default.png */,
+				B1EF90F01D10C13A00468EE0 /* Rocket.png */,
 				4CCACFAA165692D5008E9D69 /* Default@2x.png */,
 				4CCACFAC165692D5008E9D69 /* Default-568h@2x.png */,
 			);
@@ -277,6 +280,7 @@
 				4CCACFAB165692D5008E9D69 /* Default@2x.png in Resources */,
 				4CCACFAD165692D5008E9D69 /* Default-568h@2x.png in Resources */,
 				877BF2DF1B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib in Resources */,
+				B1EF90F11D10C13A00468EE0 /* Rocket.png in Resources */,
 				877BF2CB1B4BD4B100118EF2 /* PHControlLightsViewController.xib in Resources */,
 				877BF2E11B4BD4EC00118EF2 /* press_smartbridge@2x.png in Resources */,
 			);

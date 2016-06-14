@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "30410BB167290B8DC0395751A99A1354C683E2EA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BABF2D0599CA6E23FE31A3B1C37F407CA3D850D7" : 0,
+    "30410BB167290B8DC0395751A99A1354C683E2EA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "59506F30-EFF3-4A45-914D-2AA3BBCF8DF3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BABF2D0599CA6E23FE31A3B1C37F407CA3D850D7" : "PhilipsHueSDK-iOS-OSX",
+    "30410BB167290B8DC0395751A99A1354C683E2EA" : "RocketGame\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HueQuickStartApp-iOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "QuickStartApp_iOS\/HueQuickStartApp-iOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jimtoepel\/RocketGame.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30410BB167290B8DC0395751A99A1354C683E2EA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PhilipsHue\/PhilipsHueSDK-iOS-OSX.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BABF2D0599CA6E23FE31A3B1C37F407CA3D850D7"
+    }
+  ]
+}
