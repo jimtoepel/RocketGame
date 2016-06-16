@@ -27,7 +27,11 @@
 		877BF2DF1B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 877BF2D61B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib */; };
 		877BF2E01B4BD4EC00118EF2 /* press_smartbridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 877BF2D81B4BD4EC00118EF2 /* press_smartbridge.png */; };
 		877BF2E11B4BD4EC00118EF2 /* press_smartbridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 877BF2D91B4BD4EC00118EF2 /* press_smartbridge@2x.png */; };
-		B1EF90F11D10C13A00468EE0 /* Rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = B1EF90F01D10C13A00468EE0 /* Rocket.png */; };
+		B1F18D311D1268E100AF693F /* RocketFull.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2C1D1268E100AF693F /* RocketFull.png */; };
+		B1F18D321D1268E100AF693F /* RocketHalf.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2D1D1268E100AF693F /* RocketHalf.png */; };
+		B1F18D331D1268E100AF693F /* FlightPath.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2E1D1268E100AF693F /* FlightPath.png */; };
+		B1F18D341D1268E100AF693F /* RocketLand.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2F1D1268E100AF693F /* RocketLand.png */; };
+		B1F18D351D1268E100AF693F /* RocketOff.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D301D1268E100AF693F /* RocketOff.png */; };
 		F715240118337FD50033689C /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F71523F318337FD50033689C /* DDAbstractDatabaseLogger.m */; };
 		F715240218337FD50033689C /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F71523F518337FD50033689C /* DDASLLogger.m */; };
 		F715240318337FD50033689C /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F71523F718337FD50033689C /* DDFileLogger.m */; };
@@ -66,7 +70,11 @@
 		877BF2D61B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHBridgeSelectionViewController.xib; sourceTree = "<group>"; };
 		877BF2D81B4BD4EC00118EF2 /* press_smartbridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_smartbridge.png; sourceTree = "<group>"; };
 		877BF2D91B4BD4EC00118EF2 /* press_smartbridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press_smartbridge@2x.png"; sourceTree = "<group>"; };
-		B1EF90F01D10C13A00468EE0 /* Rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rocket.png; sourceTree = "<group>"; };
+		B1F18D2C1D1268E100AF693F /* RocketFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketFull.png; sourceTree = "<group>"; };
+		B1F18D2D1D1268E100AF693F /* RocketHalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketHalf.png; sourceTree = "<group>"; };
+		B1F18D2E1D1268E100AF693F /* FlightPath.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlightPath.png; sourceTree = "<group>"; };
+		B1F18D2F1D1268E100AF693F /* RocketLand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketLand.png; sourceTree = "<group>"; };
+		B1F18D301D1268E100AF693F /* RocketOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketOff.png; sourceTree = "<group>"; };
 		F71523F218337FD50033689C /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		F71523F318337FD50033689C /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		F71523F418337FD50033689C /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -144,12 +152,12 @@
 		4CCACF9D165692D4008E9D69 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1F18D2B1D1268CD00AF693F /* Art */,
 				4CCACF9E165692D4008E9D69 /* HueQuickStartApp-iOS-Info.plist */,
 				4CCACF9F165692D5008E9D69 /* InfoPlist.strings */,
 				4CCACFA2165692D5008E9D69 /* main.m */,
 				4CCACFA4165692D5008E9D69 /* HueQuickStartApp-iOS-Prefix.pch */,
 				4CCACFA8165692D5008E9D69 /* Default.png */,
-				B1EF90F01D10C13A00468EE0 /* Rocket.png */,
 				4CCACFAA165692D5008E9D69 /* Default@2x.png */,
 				4CCACFAC165692D5008E9D69 /* Default-568h@2x.png */,
 			);
@@ -188,6 +196,18 @@
 				877BF2D91B4BD4EC00118EF2 /* press_smartbridge@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B1F18D2B1D1268CD00AF693F /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				B1F18D2C1D1268E100AF693F /* RocketFull.png */,
+				B1F18D2D1D1268E100AF693F /* RocketHalf.png */,
+				B1F18D2E1D1268E100AF693F /* FlightPath.png */,
+				B1F18D2F1D1268E100AF693F /* RocketLand.png */,
+				B1F18D301D1268E100AF693F /* RocketOff.png */,
+			);
+			name = Art;
 			sourceTree = "<group>";
 		};
 		F71523F118337FD50033689C /* Lumberjack */ = {
@@ -272,15 +292,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F18D351D1268E100AF693F /* RocketOff.png in Resources */,
 				877BF2DD1B4BD4EC00118EF2 /* PHBridgePushLinkViewController.xib in Resources */,
 				4CCACFA1165692D5008E9D69 /* InfoPlist.strings in Resources */,
 				877BF2DB1B4BD4EC00118EF2 /* PHLoadingViewController.xib in Resources */,
 				877BF2E01B4BD4EC00118EF2 /* press_smartbridge.png in Resources */,
 				4CCACFA9165692D5008E9D69 /* Default.png in Resources */,
 				4CCACFAB165692D5008E9D69 /* Default@2x.png in Resources */,
+				B1F18D341D1268E100AF693F /* RocketLand.png in Resources */,
 				4CCACFAD165692D5008E9D69 /* Default-568h@2x.png in Resources */,
 				877BF2DF1B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib in Resources */,
-				B1EF90F11D10C13A00468EE0 /* Rocket.png in Resources */,
+				B1F18D321D1268E100AF693F /* RocketHalf.png in Resources */,
+				B1F18D331D1268E100AF693F /* FlightPath.png in Resources */,
+				B1F18D311D1268E100AF693F /* RocketFull.png in Resources */,
 				877BF2CB1B4BD4B100118EF2 /* PHControlLightsViewController.xib in Resources */,
 				877BF2E11B4BD4EC00118EF2 /* press_smartbridge@2x.png in Resources */,
 			);

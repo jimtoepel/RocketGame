@@ -123,8 +123,12 @@
                     <color key="textColor" red="0.066386950987103566" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlightPath.png" id="5NU-lq-3Ww">
+                    <rect key="frame" x="0.0" y="426" width="565" height="142"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                </imageView>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="jNe-0u-lOO">
-                    <rect key="frame" x="20" y="416" width="526" height="2"/>
+                    <rect key="frame" x="8" y="396" width="526" height="2"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </progressView>
             </subviews>
@@ -135,4 +139,7 @@
             <point key="canvasLocation" x="501.5" y="284"/>
         </view>
     </objects>
+    <resources>
+        <image name="FlightPath.png" width="2048" height="512"/>
+    </resources>
 </document>
