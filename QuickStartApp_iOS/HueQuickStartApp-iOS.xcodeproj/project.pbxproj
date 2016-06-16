@@ -31,6 +31,10 @@
 		B10933891D1337940063B196 /* RocketLanding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B10933851D1337940063B196 /* RocketLanding.mp3 */; };
 		B109338A1D1337940063B196 /* RocketLaunch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B10933861D1337940063B196 /* RocketLaunch.mp3 */; };
 		B109338B1D1337940063B196 /* ShipIdle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B10933871D1337940063B196 /* ShipIdle.mp3 */; };
+		B10933901D133B1B0063B196 /* ButtonLandGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338C1D133B1B0063B196 /* ButtonLandGreen.png */; };
+		B10933911D133B1B0063B196 /* ButtonLandRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338D1D133B1B0063B196 /* ButtonLandRed.png */; };
+		B10933921D133B1B0063B196 /* ButtonLaunchGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */; };
+		B10933931D133B1B0063B196 /* ButtonLaunchRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */; };
 		B1F18D311D1268E100AF693F /* RocketFull.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2C1D1268E100AF693F /* RocketFull.png */; };
 		B1F18D321D1268E100AF693F /* RocketHalf.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2D1D1268E100AF693F /* RocketHalf.png */; };
 		B1F18D331D1268E100AF693F /* FlightPath.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2E1D1268E100AF693F /* FlightPath.png */; };
@@ -78,6 +82,10 @@
 		B10933851D1337940063B196 /* RocketLanding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RocketLanding.mp3; sourceTree = "<group>"; };
 		B10933861D1337940063B196 /* RocketLaunch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = RocketLaunch.mp3; sourceTree = "<group>"; };
 		B10933871D1337940063B196 /* ShipIdle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ShipIdle.mp3; sourceTree = "<group>"; };
+		B109338C1D133B1B0063B196 /* ButtonLandGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLandGreen.png; sourceTree = "<group>"; };
+		B109338D1D133B1B0063B196 /* ButtonLandRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLandRed.png; sourceTree = "<group>"; };
+		B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLaunchGreen.png; sourceTree = "<group>"; };
+		B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLaunchRed.png; sourceTree = "<group>"; };
 		B1F18D2C1D1268E100AF693F /* RocketFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketFull.png; sourceTree = "<group>"; };
 		B1F18D2D1D1268E100AF693F /* RocketHalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketHalf.png; sourceTree = "<group>"; };
 		B1F18D2E1D1268E100AF693F /* FlightPath.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlightPath.png; sourceTree = "<group>"; };
@@ -226,6 +234,10 @@
 				B1F18D2E1D1268E100AF693F /* FlightPath.png */,
 				B1F18D2F1D1268E100AF693F /* RocketLand.png */,
 				B1F18D301D1268E100AF693F /* RocketOff.png */,
+				B109338C1D133B1B0063B196 /* ButtonLandGreen.png */,
+				B109338D1D133B1B0063B196 /* ButtonLandRed.png */,
+				B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */,
+				B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */,
 			);
 			name = Art;
 			sourceTree = "<group>";
@@ -315,6 +327,8 @@
 				B1F18D351D1268E100AF693F /* RocketOff.png in Resources */,
 				B10933891D1337940063B196 /* RocketLanding.mp3 in Resources */,
 				877BF2DD1B4BD4EC00118EF2 /* PHBridgePushLinkViewController.xib in Resources */,
+				B10933911D133B1B0063B196 /* ButtonLandRed.png in Resources */,
+				B10933921D133B1B0063B196 /* ButtonLaunchGreen.png in Resources */,
 				4CCACFA1165692D5008E9D69 /* InfoPlist.strings in Resources */,
 				877BF2DB1B4BD4EC00118EF2 /* PHLoadingViewController.xib in Resources */,
 				877BF2E01B4BD4EC00118EF2 /* press_smartbridge.png in Resources */,
@@ -322,6 +336,7 @@
 				B109338A1D1337940063B196 /* RocketLaunch.mp3 in Resources */,
 				4CCACFAB165692D5008E9D69 /* Default@2x.png in Resources */,
 				B1F18D341D1268E100AF693F /* RocketLand.png in Resources */,
+				B10933931D133B1B0063B196 /* ButtonLaunchRed.png in Resources */,
 				4CCACFAD165692D5008E9D69 /* Default-568h@2x.png in Resources */,
 				877BF2DF1B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib in Resources */,
 				B10933881D1337940063B196 /* RocketCountdown.mp3 in Resources */,
@@ -330,6 +345,7 @@
 				B1F18D331D1268E100AF693F /* FlightPath.png in Resources */,
 				B1F18D311D1268E100AF693F /* RocketFull.png in Resources */,
 				877BF2CB1B4BD4B100118EF2 /* PHControlLightsViewController.xib in Resources */,
+				B10933901D133B1B0063B196 /* ButtonLandGreen.png in Resources */,
 				877BF2E11B4BD4EC00118EF2 /* press_smartbridge@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

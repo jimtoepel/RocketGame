@@ -37,33 +37,13 @@
                         <action selector="randomizeColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="40"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mlY-e4-FVM" userLabel="LaunchLightsButton">
-                    <rect key="frame" x="20" y="268" width="151" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dg6-7P-RJh" userLabel="LandingLightsButton">
+                    <rect key="frame" x="334" y="184" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
                     </accessibility>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <color key="tintColor" red="1" green="0.0" blue="0.010267665139986448" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Launch">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="disabled">
-                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="launchColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="FUA-ff-Bm2"/>
-                        <action selector="randomizeColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="gjt-KL-IuU"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dg6-7P-RJh" userLabel="LandingLightsButton">
-                    <rect key="frame" x="395" y="268" width="151" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
-                    </accessibility>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" title="Landing">
+                    <state key="normal" title="Landing" image="ButtonLandGreen.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="disabled">
@@ -131,6 +111,24 @@
                     <rect key="frame" x="8" y="396" width="526" height="2"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mlY-e4-FVM" userLabel="LaunchLightsButton">
+                    <rect key="frame" x="39" y="188" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
+                    </accessibility>
+                    <color key="tintColor" red="1" green="0.0" blue="0.010267665139986448" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Launch" image="ButtonLaunchGreen.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="launchColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="FUA-ff-Bm2"/>
+                        <action selector="randomizeColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="gjt-KL-IuU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -140,6 +138,8 @@
         </view>
     </objects>
     <resources>
+        <image name="ButtonLandGreen.png" width="600" height="600"/>
+        <image name="ButtonLaunchGreen.png" width="600" height="600"/>
         <image name="FlightPath.png" width="2048" height="512"/>
     </resources>
 </document>
