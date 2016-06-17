@@ -50,8 +50,7 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="landingColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="DDo-fN-IwW"/>
-                        <action selector="randomizeColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="WQ0-Kl-7Vw"/>
+                        <action selector="landingButtonPressed:" destination="-1" eventType="touchUpInside" id="l5R-8Y-qMO"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected bridge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76">
@@ -125,8 +124,7 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="launchColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="FUA-ff-Bm2"/>
-                        <action selector="randomizeColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="gjt-KL-IuU"/>
+                        <action selector="launchButtonPressed:" destination="-1" eventType="touchUpInside" id="AOh-Cj-jym"/>
                     </connections>
                 </button>
             </subviews>

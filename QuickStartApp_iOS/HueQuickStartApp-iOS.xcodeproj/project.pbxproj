@@ -35,6 +35,7 @@
 		B10933911D133B1B0063B196 /* ButtonLandRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338D1D133B1B0063B196 /* ButtonLandRed.png */; };
 		B10933921D133B1B0063B196 /* ButtonLaunchGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */; };
 		B10933931D133B1B0063B196 /* ButtonLaunchRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */; };
+		B12F91281D14AEB600AFB6C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12F91271D14AEB600AFB6C0 /* AVFoundation.framework */; };
 		B1F18D311D1268E100AF693F /* RocketFull.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2C1D1268E100AF693F /* RocketFull.png */; };
 		B1F18D321D1268E100AF693F /* RocketHalf.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2D1D1268E100AF693F /* RocketHalf.png */; };
 		B1F18D331D1268E100AF693F /* FlightPath.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2E1D1268E100AF693F /* FlightPath.png */; };
@@ -86,6 +87,7 @@
 		B109338D1D133B1B0063B196 /* ButtonLandRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLandRed.png; sourceTree = "<group>"; };
 		B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLaunchGreen.png; sourceTree = "<group>"; };
 		B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLaunchRed.png; sourceTree = "<group>"; };
+		B12F91271D14AEB600AFB6C0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B1F18D2C1D1268E100AF693F /* RocketFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketFull.png; sourceTree = "<group>"; };
 		B1F18D2D1D1268E100AF693F /* RocketHalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketHalf.png; sourceTree = "<group>"; };
 		B1F18D2E1D1268E100AF693F /* FlightPath.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlightPath.png; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12F91281D14AEB600AFB6C0 /* AVFoundation.framework in Frameworks */,
 				87194E79184F7FA700576916 /* CoreGraphics.framework in Frameworks */,
 				4CCACF97165692D4008E9D69 /* UIKit.framework in Frameworks */,
 				166943151ABC300800BF8B37 /* HueSDK_iOS.framework in Frameworks */,
@@ -143,6 +146,7 @@
 		4CCACF95165692D4008E9D69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B12F91271D14AEB600AFB6C0 /* AVFoundation.framework */,
 				166943141ABC300800BF8B37 /* HueSDK_iOS.framework */,
 				87194E78184F7FA700576916 /* CoreGraphics.framework */,
 				F71523F118337FD50033689C /* Lumberjack */,

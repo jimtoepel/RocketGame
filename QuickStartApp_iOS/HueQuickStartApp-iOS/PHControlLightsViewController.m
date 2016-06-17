@@ -141,7 +141,7 @@
 
 - (IBAction)launchColoursOfConnectLights:(id)sender{
     [self.randomLightsButton setEnabled:NO];
-    [self moveRocketUp];
+
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
@@ -170,7 +170,7 @@
 
 - (IBAction)landingColoursOfConnectLights:(id)sender{
     [self.randomLightsButton setEnabled:NO];
-    [self moveRocketDown];
+
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
     PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
@@ -197,18 +197,35 @@
 }
 
 
+-(IBAction)launchButtonPressed:(id)sender {
+    
+    NSLog(@"Launch Button Pressed:");
+    [self moveRocketUp];
+}
+
+-(IBAction)landingButtonPressed:(id)sender {
+    
+    NSLog(@"Landing Button Pressed:");
+    [self moveRocketDown];
+}
+
+
 - (void)findNewBridgeButtonAction{
     [UIAppDelegate searchForBridgeLocal];
 }
 
 
 -(void)moveRocketUp{
-    self.ProgressBar.progress = self.ProgressBar.progress + .1;
+    if (self.ProgressBar.progress < 1.0) {
+        self.ProgressBar.progress = self.ProgressBar.progress + .1;
+    }
     
 }
 
 -(void)moveRocketDown{
-    self.ProgressBar.progress = self.ProgressBar.progress - .1;
+    if (self.ProgressBar.progress > 0.0) {
+        self.ProgressBar.progress = self.ProgressBar.progress - .1;
+    }
 }
 
 @end
