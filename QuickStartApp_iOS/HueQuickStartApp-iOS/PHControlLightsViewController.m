@@ -139,7 +139,7 @@
 
 
 
-- (IBAction)launchColoursOfConnectLights:(id)sender{
+- (void)launchColoursOfConnectLights{
     [self.randomLightsButton setEnabled:NO];
 
     
@@ -150,7 +150,7 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:240]];
+        [lightState setHue:[NSNumber numberWithInt:50]];
         [lightState setBrightness:[NSNumber numberWithInt:254]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
@@ -168,7 +168,7 @@
 }
 
 
-- (IBAction)landingColoursOfConnectLights:(id)sender{
+- (void)landingColoursOfConnectLights{
     [self.randomLightsButton setEnabled:NO];
 
     
@@ -180,8 +180,8 @@
         PHLightState *lightState = [[PHLightState alloc] init];
         
         [lightState setHue:[NSNumber numberWithInt:15]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
-        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        [lightState setBrightness:[NSNumber numberWithInt:15]];
+        [lightState setSaturation:[NSNumber numberWithInt:15]];
         
         // Send lightstate to light
         [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
@@ -219,6 +219,7 @@
     if (self.ProgressBar.progress < 1.0) {
         self.ProgressBar.progress = self.ProgressBar.progress + .1;
     }
+    [self launchColoursOfConnectLights];
     
 }
 
@@ -226,6 +227,7 @@
     if (self.ProgressBar.progress > 0.0) {
         self.ProgressBar.progress = self.ProgressBar.progress - .1;
     }
+    [self landingColoursOfConnectLights];
 }
 
 @end
