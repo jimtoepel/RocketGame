@@ -200,7 +200,11 @@
 -(IBAction)launchButtonPressed:(id)sender {
     
     NSLog(@"Launch Button Pressed:");
-    [self moveRocketUp];
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                        target: self
+                                                      selector: @selector(moveRocketUp:)
+                                                      userInfo: nil
+                                                       repeats: YES];
 }
 
 -(IBAction)landingButtonPressed:(id)sender {
@@ -215,7 +219,7 @@
 }
 
 
--(void)moveRocketUp{
+-(void)moveRocketUp:(NSTimer *) t {
     if (self.ProgressBar.progress < 1.0) {
         self.ProgressBar.progress = self.ProgressBar.progress + .1;
     }
