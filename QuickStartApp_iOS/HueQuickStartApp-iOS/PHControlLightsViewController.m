@@ -5,6 +5,7 @@
 
 #import "PHControlLightsViewController.h"
 #import "PHAppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 #import <HueSDK_iOS/HueSDK.h>
 #define MAX_HUE 65535
@@ -47,6 +48,7 @@
     
     self.navigationItem.title = @"QuickStart";
     [self noLocalConnection];
+    
 }
 
 - (UIRectEdge)edgesForExtendedLayout {
@@ -199,12 +201,21 @@
 
 -(IBAction)launchButtonPressed:(id)sender {
     
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"RocketLaunch"
+                                                              ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+                                                                   error:nil];
+    player.numberOfLoops = 1;
+    [player play];
+    
     NSLog(@"Launch Button Pressed:");
     NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
                                                         target: self
                                                       selector: @selector(moveRocketUp:)
                                                       userInfo: nil
                                                        repeats: YES];
+    
 }
 
 -(IBAction)landingButtonPressed:(id)sender {
@@ -224,6 +235,7 @@
         self.ProgressBar.progress = self.ProgressBar.progress + .1;
     }
     [self launchColoursOfConnectLights];
+   
     
 }
 
@@ -232,6 +244,7 @@
         self.ProgressBar.progress = self.ProgressBar.progress - .1;
     }
     [self landingColoursOfConnectLights];
+
 }
 
 @end
