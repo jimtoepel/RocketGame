@@ -152,7 +152,7 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:50]];
+        [lightState setHue:[NSNumber numberWithInt:254]];
         [lightState setBrightness:[NSNumber numberWithInt:254]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
