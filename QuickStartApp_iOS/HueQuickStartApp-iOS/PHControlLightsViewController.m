@@ -49,6 +49,14 @@
     self.navigationItem.title = @"QuickStart";
     [self noLocalConnection];
     
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"ShipIdle"
+                                                              ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+                                                                   error:nil];
+    player.numberOfLoops = 1;
+
+    
 }
 
 - (UIRectEdge)edgesForExtendedLayout {
@@ -111,6 +119,13 @@
 - (IBAction)selectOtherBridge:(id)sender{
     [UIAppDelegate searchForBridgeLocal];
 }
+
+
+
+- (void)findNewBridgeButtonAction{
+    [UIAppDelegate searchForBridgeLocal];
+}
+
 
 - (IBAction)randomizeColoursOfConnectLights:(id)sender{
     [self.randomLightsButton setEnabled:NO];
@@ -200,15 +215,7 @@
 
 
 -(IBAction)launchButtonPressed:(id)sender {
-    
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"RocketCountdown"
-                                                              ofType:@"mp3"];
-    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
-                                                                   error:nil];
-    player.numberOfLoops = 0;
-    [player play];
-    
+    [self prepRocket];
     NSLog(@"Launch Button Pressed:");
 
 }
@@ -219,40 +226,31 @@
 -(IBAction)landingButtonPressed:(id)sender {
     
     NSLog(@"Landing Button Pressed:");
-    [self moveRocketDown];
 }
 
 
-- (void)findNewBridgeButtonAction{
-    [UIAppDelegate searchForBridgeLocal];
-}
 
 
--(void)flightStatus {
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
-                                                        target: self
-                                                      selector: @selector(moveRocketUp:)
-                                                      userInfo: nil
-                                                       repeats: YES];
+-(void)prepRocket {
+    NSLog(@"Prepping rocket");
 
 }
 
-
--(void)moveRocketUp:(NSTimer *) t {
-    if (self.ProgressBar.progress < 1.0) {
-        self.ProgressBar.progress = self.ProgressBar.progress + .1;
-    }
-    [self launchColoursOfConnectLights];
-   
-    
+-(void)launchRocket {
+    NSLog(@"Launching Rocket");
+    [self landingColoursOfConnectLights];
 }
 
--(void)moveRocketDown{
-    if (self.ProgressBar.progress > 0.0) {
-        self.ProgressBar.progress = self.ProgressBar.progress - .1;
-    }
+-(void)landRocket {
+    NSLog(@"Landing Rocket");
+    [self landingColoursOfConnectLights];
+}
+
+-(void)openTheSky{
+    NSLog(@"Opening Portal");
     [self landingColoursOfConnectLights];
 
 }
+
 
 @end
