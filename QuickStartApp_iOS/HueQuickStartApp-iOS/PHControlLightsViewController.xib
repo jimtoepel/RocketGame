@@ -7,9 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PHControlLightsViewController">
             <connections>
-                <outlet property="LandingLightsButton" destination="dg6-7P-RJh" id="fT1-RI-2bo"/>
+                <outlet property="CloseWindowButton" destination="JvF-Qy-DhQ" id="pwk-XY-a3n"/>
+                <outlet property="EmergencyButton" destination="dg6-7P-RJh" id="9ow-zb-O76"/>
+                <outlet property="LandingLightsButton" destination="jVZ-bG-DqK" id="2NN-Yc-4TW"/>
                 <outlet property="LaunchLightButton" destination="mlY-e4-FVM" id="hIl-Yq-CrR"/>
-                <outlet property="ProgressBar" destination="jNe-0u-lOO" id="pcu-Vb-2XJ"/>
+                <outlet property="LaunchLightsButton" destination="mlY-e4-FVM" id="8Od-sn-ddY"/>
+                <outlet property="OpenWindowButton" destination="k61-0H-Xfi" id="yII-o4-GnX"/>
+                <outlet property="RepairButton" destination="ddU-PL-VdM" id="eyq-X4-8bs"/>
                 <outlet property="bridgeIdLabel" destination="81" id="87"/>
                 <outlet property="bridgeIpLabel" destination="80" id="83"/>
                 <outlet property="bridgeLastHeartbeatLabel" destination="82" id="85"/>
@@ -37,8 +41,25 @@
                         <action selector="randomizeColoursOfConnectLights:" destination="-1" eventType="touchUpInside" id="40"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dg6-7P-RJh" userLabel="LandingLightsButton">
-                    <rect key="frame" x="334" y="184" width="200" height="200"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mlY-e4-FVM" userLabel="LaunchLightsButton">
+                    <rect key="frame" x="43" y="149" width="138" height="138"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
+                    </accessibility>
+                    <color key="tintColor" red="1" green="0.0" blue="0.010267665139986448" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Launch" image="ButtonLaunchGreen.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="launchButtonPressed:" destination="-1" eventType="touchUpInside" id="AOh-Cj-jym"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jVZ-bG-DqK" userLabel="LandingLightsButton">
+                    <rect key="frame" x="43" y="295" width="138" height="138"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
@@ -50,7 +71,7 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="landingButtonPressed:" destination="-1" eventType="touchUpInside" id="l5R-8Y-qMO"/>
+                        <action selector="landingButtonPressed:" destination="-1" eventType="touchUpInside" id="j8B-ZM-BMx"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected bridge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="76">
@@ -106,25 +127,73 @@
                     <rect key="frame" x="0.0" y="426" width="565" height="142"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                 </imageView>
-                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="jNe-0u-lOO">
-                    <rect key="frame" x="8" y="396" width="526" height="2"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </progressView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mlY-e4-FVM" userLabel="LaunchLightsButton">
-                    <rect key="frame" x="39" y="188" width="200" height="200"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k61-0H-Xfi" userLabel="OpenWindowLightsButton">
+                    <rect key="frame" x="219" y="149" width="138" height="138"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
                     </accessibility>
-                    <color key="tintColor" red="1" green="0.0" blue="0.010267665139986448" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Launch" image="ButtonLaunchGreen.png">
+                    <color key="tintColor" red="1" green="0.0" blue="0.01026766514" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Launch" image="ButtonOpenWindow.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="disabled">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="launchButtonPressed:" destination="-1" eventType="touchUpInside" id="AOh-Cj-jym"/>
+                        <action selector="launchButtonPressed:" destination="-1" eventType="touchUpInside" id="JIh-tU-JoR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dg6-7P-RJh" userLabel="EmergencyLightsButton">
+                    <rect key="frame" x="396" y="149" width="138" height="138"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
+                    </accessibility>
+                    <state key="normal" title="Landing" image="ButtonEmergencyButton.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="landingButtonPressed:" destination="-1" eventType="touchUpInside" id="l5R-8Y-qMO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ddU-PL-VdM" userLabel="RepairLightsButton">
+                    <rect key="frame" x="396" y="295" width="138" height="138"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
+                    </accessibility>
+                    <state key="normal" title="Landing" image="ButtonRepairButton.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="landingButtonPressed:" destination="-1" eventType="touchUpInside" id="KPj-Vc-j79"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RocketFull.png" id="f1k-cG-7Ju">
+                    <rect key="frame" x="208" y="463" width="163" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JvF-Qy-DhQ" userLabel="CloseWindowLightsButton">
+                    <rect key="frame" x="219" y="295" width="138" height="138"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES" playsSound="YES"/>
+                    </accessibility>
+                    <state key="normal" title="Landing" image="ButtonCloseWindow.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="landingButtonPressed:" destination="-1" eventType="touchUpInside" id="xj4-Gu-duH"/>
                     </connections>
                 </button>
             </subviews>
@@ -136,8 +205,13 @@
         </view>
     </objects>
     <resources>
+        <image name="ButtonCloseWindow.png" width="600" height="600"/>
+        <image name="ButtonEmergencyButton.png" width="600" height="600"/>
         <image name="ButtonLandGreen.png" width="600" height="600"/>
         <image name="ButtonLaunchGreen.png" width="600" height="600"/>
+        <image name="ButtonOpenWindow.png" width="600" height="600"/>
+        <image name="ButtonRepairButton.png" width="600" height="600"/>
         <image name="FlightPath.png" width="2048" height="512"/>
+        <image name="RocketFull.png" width="512" height="512"/>
     </resources>
 </document>

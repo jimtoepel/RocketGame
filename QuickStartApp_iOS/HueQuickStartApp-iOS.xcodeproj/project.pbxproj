@@ -36,6 +36,10 @@
 		B10933921D133B1B0063B196 /* ButtonLaunchGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */; };
 		B10933931D133B1B0063B196 /* ButtonLaunchRed.png in Resources */ = {isa = PBXBuildFile; fileRef = B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */; };
 		B12F91281D14AEB600AFB6C0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12F91271D14AEB600AFB6C0 /* AVFoundation.framework */; };
+		B1E0061F1D1CA44D005EDBCA /* ButtonCloseWindow.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E0061B1D1CA44C005EDBCA /* ButtonCloseWindow.png */; };
+		B1E006201D1CA44D005EDBCA /* ButtonEmergencyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E0061C1D1CA44C005EDBCA /* ButtonEmergencyButton.png */; };
+		B1E006211D1CA44D005EDBCA /* ButtonOpenWindow.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E0061D1D1CA44C005EDBCA /* ButtonOpenWindow.png */; };
+		B1E006221D1CA44D005EDBCA /* ButtonRepairButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E0061E1D1CA44C005EDBCA /* ButtonRepairButton.png */; };
 		B1F18D311D1268E100AF693F /* RocketFull.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2C1D1268E100AF693F /* RocketFull.png */; };
 		B1F18D321D1268E100AF693F /* RocketHalf.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2D1D1268E100AF693F /* RocketHalf.png */; };
 		B1F18D331D1268E100AF693F /* FlightPath.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F18D2E1D1268E100AF693F /* FlightPath.png */; };
@@ -88,6 +92,10 @@
 		B109338E1D133B1B0063B196 /* ButtonLaunchGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLaunchGreen.png; sourceTree = "<group>"; };
 		B109338F1D133B1B0063B196 /* ButtonLaunchRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLaunchRed.png; sourceTree = "<group>"; };
 		B12F91271D14AEB600AFB6C0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B1E0061B1D1CA44C005EDBCA /* ButtonCloseWindow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonCloseWindow.png; sourceTree = "<group>"; };
+		B1E0061C1D1CA44C005EDBCA /* ButtonEmergencyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonEmergencyButton.png; sourceTree = "<group>"; };
+		B1E0061D1D1CA44C005EDBCA /* ButtonOpenWindow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonOpenWindow.png; sourceTree = "<group>"; };
+		B1E0061E1D1CA44C005EDBCA /* ButtonRepairButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRepairButton.png; sourceTree = "<group>"; };
 		B1F18D2C1D1268E100AF693F /* RocketFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketFull.png; sourceTree = "<group>"; };
 		B1F18D2D1D1268E100AF693F /* RocketHalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketHalf.png; sourceTree = "<group>"; };
 		B1F18D2E1D1268E100AF693F /* FlightPath.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlightPath.png; sourceTree = "<group>"; };
@@ -233,6 +241,10 @@
 		B1F18D2B1D1268CD00AF693F /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				B1E0061B1D1CA44C005EDBCA /* ButtonCloseWindow.png */,
+				B1E0061C1D1CA44C005EDBCA /* ButtonEmergencyButton.png */,
+				B1E0061D1D1CA44C005EDBCA /* ButtonOpenWindow.png */,
+				B1E0061E1D1CA44C005EDBCA /* ButtonRepairButton.png */,
 				B1F18D2C1D1268E100AF693F /* RocketFull.png */,
 				B1F18D2D1D1268E100AF693F /* RocketHalf.png */,
 				B1F18D2E1D1268E100AF693F /* FlightPath.png */,
@@ -329,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1F18D351D1268E100AF693F /* RocketOff.png in Resources */,
+				B1E006201D1CA44D005EDBCA /* ButtonEmergencyButton.png in Resources */,
 				B10933891D1337940063B196 /* RocketLanding.mp3 in Resources */,
 				877BF2DD1B4BD4EC00118EF2 /* PHBridgePushLinkViewController.xib in Resources */,
 				B10933911D133B1B0063B196 /* ButtonLandRed.png in Resources */,
@@ -338,9 +351,11 @@
 				877BF2E01B4BD4EC00118EF2 /* press_smartbridge.png in Resources */,
 				4CCACFA9165692D5008E9D69 /* Default.png in Resources */,
 				B109338A1D1337940063B196 /* RocketLaunch.mp3 in Resources */,
+				B1E0061F1D1CA44D005EDBCA /* ButtonCloseWindow.png in Resources */,
 				4CCACFAB165692D5008E9D69 /* Default@2x.png in Resources */,
 				B1F18D341D1268E100AF693F /* RocketLand.png in Resources */,
 				B10933931D133B1B0063B196 /* ButtonLaunchRed.png in Resources */,
+				B1E006211D1CA44D005EDBCA /* ButtonOpenWindow.png in Resources */,
 				4CCACFAD165692D5008E9D69 /* Default-568h@2x.png in Resources */,
 				877BF2DF1B4BD4EC00118EF2 /* PHBridgeSelectionViewController.xib in Resources */,
 				B10933881D1337940063B196 /* RocketCountdown.mp3 in Resources */,
@@ -348,6 +363,7 @@
 				B109338B1D1337940063B196 /* ShipIdle.mp3 in Resources */,
 				B1F18D331D1268E100AF693F /* FlightPath.png in Resources */,
 				B1F18D311D1268E100AF693F /* RocketFull.png in Resources */,
+				B1E006221D1CA44D005EDBCA /* ButtonRepairButton.png in Resources */,
 				877BF2CB1B4BD4B100118EF2 /* PHControlLightsViewController.xib in Resources */,
 				B10933901D133B1B0063B196 /* ButtonLandGreen.png in Resources */,
 				877BF2E11B4BD4EC00118EF2 /* press_smartbridge@2x.png in Resources */,

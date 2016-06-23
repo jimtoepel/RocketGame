@@ -16,9 +16,12 @@
 @property (nonatomic,weak) IBOutlet UILabel *bridgeIpLabel;
 @property (nonatomic,weak) IBOutlet UILabel *bridgeLastHeartbeatLabel;
 @property (nonatomic,weak) IBOutlet UIButton *randomLightsButton;
+@property (weak, nonatomic) IBOutlet UIButton *LaunchLightsButton;
 @property (weak, nonatomic) IBOutlet UIButton *LandingLightsButton;
-@property (weak, nonatomic) IBOutlet UIButton *LaunchLightButton;
-@property (weak, nonatomic) IBOutlet UIProgressView *ProgressBar;
+@property (weak, nonatomic) IBOutlet UIButton *OpenWindowButton;
+@property (weak, nonatomic) IBOutlet UIButton *CloseWindowButton;
+@property (weak, nonatomic) IBOutlet UIButton *EmergencyButton;
+@property (weak, nonatomic) IBOutlet UIButton *RepairButton;
 
 
 @end
@@ -233,6 +236,7 @@
 
 -(void)prepRocket {
     NSLog(@"Prepping rocket");
+    [self launchColoursOfConnectLights];
 
 }
 
