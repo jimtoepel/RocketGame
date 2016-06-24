@@ -199,9 +199,122 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:15]];
-        [lightState setBrightness:[NSNumber numberWithInt:15]];
-        [lightState setSaturation:[NSNumber numberWithInt:15]];
+        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+            [self.randomLightsButton setEnabled:YES];
+        }];
+    }
+}
+
+- (void)openWindowsColoursOfConnectLights{
+    [self.randomLightsButton setEnabled:NO];
+    
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+            [self.randomLightsButton setEnabled:YES];
+        }];
+    }
+}
+
+- (void)closeWindowsColoursOfConnectLights{
+    [self.randomLightsButton setEnabled:NO];
+    
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+            [self.randomLightsButton setEnabled:YES];
+        }];
+    }
+}
+
+- (void)emergencyColoursOfConnectLights{
+    [self.randomLightsButton setEnabled:NO];
+    
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+            [self.randomLightsButton setEnabled:YES];
+        }];
+    }
+}
+
+
+- (void)repairColoursOfConnectLights{
+    [self.randomLightsButton setEnabled:NO];
+    
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setSaturation:[NSNumber numberWithInt:254]];
         
         // Send lightstate to light
         [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
@@ -218,43 +331,70 @@
 
 
 -(IBAction)launchButtonPressed:(id)sender {
-    [self prepRocket];
-    NSLog(@"Launch Button Pressed:");
+    
+    NSLog(@"5, 4, 3, 2, 1, Liftoff!");
+    [self launchColoursOfConnectLights];
+    
+/*    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"RocketCountdown"
+                                                              ofType:@"mp3"];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+                                                                   error:nil];
+    player.numberOfLoops = 0;
+    [player play]; 
 
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                        target: self
+                                                      selector: @selector(launchRocket:)
+                                                      userInfo: nil
+                                                       repeats: YES];
+*/
+    
 }
+
 
 
 
 
 -(IBAction)landingButtonPressed:(id)sender {
     
-    NSLog(@"Landing Button Pressed:");
+    NSLog(@"Incoming landing...");
+    [self landingColoursOfConnectLights];
+}
+
+-(IBAction)openWindowsButtonPressed:(id)sender {
+    
+    NSLog(@"Obervation Window Open");
+    [self openWindowsColoursOfConnectLights];
+}
+
+
+-(IBAction)closeWindowsButtonPressed:(id)sender {
+    
+    NSLog(@"Closing Observation Window");
+    [self closeWindowsColoursOfConnectLights];
+}
+
+-(IBAction)emergencyButtonPressed:(id)sender {
+    
+    NSLog(@"Emergency, Emergency, Emergency!");
+    [self emergencyColoursOfConnectLights];
+    
+}
+
+-(IBAction)repairButtonPressed:(id)sender {
+    
+    NSLog(@"Repair Button Pressed:");
+    [self repairColoursOfConnectLights];
 }
 
 
 
-
--(void)prepRocket {
-    NSLog(@"Prepping rocket");
-    [self launchColoursOfConnectLights];
-
-}
-
--(void)launchRocket {
+-(void)launchRocket:(NSTimer *)myTimer {
     NSLog(@"Launching Rocket");
-    [self landingColoursOfConnectLights];
+    [self launchColoursOfConnectLights];
 }
 
--(void)landRocket {
-    NSLog(@"Landing Rocket");
-    [self landingColoursOfConnectLights];
-}
-
--(void)openTheSky{
-    NSLog(@"Opening Portal");
-    [self landingColoursOfConnectLights];
-
-}
 
 
 @end
