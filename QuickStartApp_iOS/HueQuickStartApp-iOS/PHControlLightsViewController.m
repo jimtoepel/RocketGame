@@ -160,7 +160,7 @@
 
 
 - (void)launchColoursOfConnectLights{
-    [self.randomLightsButton setEnabled:NO];
+    [self.LaunchLightsButton setEnabled:NO];
 
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
@@ -182,14 +182,14 @@
                 NSLog(@"Response: %@",message);
             }
             
-            [self.randomLightsButton setEnabled:YES];
+            [self.LaunchLightsButton setEnabled:YES];
         }];
     }
 }
 
 
 - (void)landingColoursOfConnectLights{
-    [self.randomLightsButton setEnabled:NO];
+    [self.LandingLightsButton setEnabled:NO];
 
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
@@ -211,13 +211,13 @@
                 NSLog(@"Response: %@",message);
             }
             
-            [self.randomLightsButton setEnabled:YES];
+            [self.LandingLightsButton setEnabled:YES];
         }];
     }
 }
 
 - (void)openWindowsColoursOfConnectLights{
-    [self.randomLightsButton setEnabled:NO];
+    [self.OpenWindowButton setEnabled:NO];
     
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
@@ -239,13 +239,13 @@
                 NSLog(@"Response: %@",message);
             }
             
-            [self.randomLightsButton setEnabled:YES];
+            [self.OpenWindowButton setEnabled:YES];
         }];
     }
 }
 
 - (void)closeWindowsColoursOfConnectLights{
-    [self.randomLightsButton setEnabled:NO];
+    [self.CloseWindowButton setEnabled:NO];
     
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
@@ -267,13 +267,13 @@
                 NSLog(@"Response: %@",message);
             }
             
-            [self.randomLightsButton setEnabled:YES];
+            [self.CloseWindowButton setEnabled:YES];
         }];
     }
 }
 
 - (void)emergencyColoursOfConnectLights{
-    [self.randomLightsButton setEnabled:NO];
+    [self.EmergencyButton setEnabled:NO];
     
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
@@ -295,14 +295,14 @@
                 NSLog(@"Response: %@",message);
             }
             
-            [self.randomLightsButton setEnabled:YES];
+            [self.EmergencyButton setEnabled:YES];
         }];
     }
 }
 
 
 - (void)repairColoursOfConnectLights{
-    [self.randomLightsButton setEnabled:NO];
+    [self.RepairButton setEnabled:NO];
     
     
     PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
@@ -324,7 +324,7 @@
                 NSLog(@"Response: %@",message);
             }
             
-            [self.randomLightsButton setEnabled:YES];
+            [self.RepairButton setEnabled:YES];
         }];
     }
 }
