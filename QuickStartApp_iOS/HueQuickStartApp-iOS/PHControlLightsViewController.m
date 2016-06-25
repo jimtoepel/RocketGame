@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *RepairButton;
 
 
+
 @end
 
 
@@ -52,12 +53,6 @@
     self.navigationItem.title = @"QuickStart";
     [self noLocalConnection];
     
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"ShipIdle"
-                                                              ofType:@"mp3"];
-    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
-                                                                   error:nil];
-    player.numberOfLoops = 1;
 
     
 }
@@ -170,8 +165,8 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setHue:[NSNumber numberWithInt:(arc4random() % 10000)]];
+        [lightState setBrightness:[NSNumber numberWithInt:(arc4random() % 254)]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
         // Send lightstate to light
@@ -199,7 +194,7 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
+        [lightState setHue:[NSNumber numberWithInt:(arc4random() % 1000 + 50000)]];
         [lightState setBrightness:[NSNumber numberWithInt:254]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
@@ -227,8 +222,8 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setHue:[NSNumber numberWithInt:(arc4random() % 1000 + 37000)]];
+        [lightState setBrightness:[NSNumber numberWithInt:(arc4random() % 50 + 200)]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
         // Send lightstate to light
@@ -255,9 +250,9 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
-        [lightState setSaturation:[NSNumber numberWithInt:254]];
+        [lightState setHue:[NSNumber numberWithInt:1]];
+        [lightState setBrightness:[NSNumber numberWithInt:1]];
+        [lightState setSaturation:[NSNumber numberWithInt:1]];
         
         // Send lightstate to light
         [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
@@ -283,8 +278,8 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setHue:[NSNumber numberWithInt:(arc4random() % 1000)]];
+        [lightState setBrightness:[NSNumber numberWithInt:arc4random() % 254]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
         // Send lightstate to light
@@ -312,8 +307,8 @@
         
         PHLightState *lightState = [[PHLightState alloc] init];
         
-        [lightState setHue:[NSNumber numberWithInt:arc4random() % MAX_HUE]];
-        [lightState setBrightness:[NSNumber numberWithInt:254]];
+        [lightState setHue:[NSNumber numberWithInt:12500]];
+        [lightState setBrightness:[NSNumber numberWithInt:arc4random() % 254]];
         [lightState setSaturation:[NSNumber numberWithInt:254]];
         
         // Send lightstate to light
@@ -333,23 +328,17 @@
 -(IBAction)launchButtonPressed:(id)sender {
     
     NSLog(@"5, 4, 3, 2, 1, Liftoff!");
-    [self launchColoursOfConnectLights];
     
-/*    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"RocketCountdown"
-                                                              ofType:@"mp3"];
-    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
-                                                                   error:nil];
-    player.numberOfLoops = 0;
-    [player play]; 
-
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
-                                                        target: self
-                                                      selector: @selector(launchRocket:)
-                                                      userInfo: nil
-                                                       repeats: YES];
-*/
+    for (int i = 1; i <= 30; i++)
+    {
+        NSLog(@"%d", i);
     
+        NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                            target: self
+                                                          selector: @selector(launchRocket:)
+                                                          userInfo: nil
+                                                           repeats: NO];
+    }
 }
 
 
@@ -357,15 +346,34 @@
 
 
 -(IBAction)landingButtonPressed:(id)sender {
-    
+    NSLog(@"%d is MaxHue", MAX_HUE);
     NSLog(@"Incoming landing...");
-    [self landingColoursOfConnectLights];
+    for (int i = 1; i <= 30; i++)
+    {
+        NSLog(@"%d", i);
+        
+        NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                            target: self
+                                                          selector: @selector(landRocket:)
+                                                          userInfo: nil
+                                                           repeats: NO];
+    }
+
 }
 
 -(IBAction)openWindowsButtonPressed:(id)sender {
     
     NSLog(@"Obervation Window Open");
-    [self openWindowsColoursOfConnectLights];
+    for (int i = 1; i <= 30; i++)
+    {
+        NSLog(@"%d", i);
+        
+        NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 5.0
+                                                            target: self
+                                                          selector: @selector(openWindow:)
+                                                          userInfo: nil
+                                                           repeats: NO];
+    }
 }
 
 
@@ -378,23 +386,67 @@
 -(IBAction)emergencyButtonPressed:(id)sender {
     
     NSLog(@"Emergency, Emergency, Emergency!");
-    [self emergencyColoursOfConnectLights];
+    for (int i = 1; i <= 30; i++)
+    {
+        NSLog(@"%d", i);
+        
+        NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                            target: self
+                                                          selector: @selector(emergencyRocket:)
+                                                          userInfo: nil
+                                                           repeats: NO];
+    }
     
 }
 
 -(IBAction)repairButtonPressed:(id)sender {
     
     NSLog(@"Repair Button Pressed:");
-    [self repairColoursOfConnectLights];
+    for (int i = 1; i <= 30; i++)
+    {
+        NSLog(@"%d", i);
+        
+        NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                                            target: self
+                                                          selector: @selector(repairRocket:)
+                                                          userInfo: nil
+                                                           repeats: NO];
+    }
 }
 
 
 
 -(void)launchRocket:(NSTimer *)myTimer {
-    NSLog(@"Launching Rocket");
     [self launchColoursOfConnectLights];
+
+}
+
+-(void)landRocket:(NSTimer *)myTimer {
+    [self landingColoursOfConnectLights];
+}
+
+-(void)emergencyRocket:(NSTimer *)myTimer {
+    [self emergencyColoursOfConnectLights];
 }
 
 
+-(void)repairRocket:(NSTimer *)myTimer {
+    [self repairColoursOfConnectLights];
+}
+
+-(void)openWindow:(NSTimer *)myTimer {
+    [self openWindowsColoursOfConnectLights];
+}
 
 @end
+
+
+/*
+ NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"RocketCountdown"
+ ofType:@"mp3"];
+ NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+ AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+ error:nil];
+ player.numberOfLoops = 0;
+ [player play];
+ */
