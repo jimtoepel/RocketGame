@@ -317,6 +317,11 @@
 				CLASSPREFIX = PH;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Philips;
+				TargetAttributes = {
+					4CCACF91165692D4008E9D69 = {
+						DevelopmentTeam = 6RBB35F5G7;
+					};
+				};
 			};
 			buildConfigurationList = 4CCACF8C165692D4008E9D69 /* Build configuration list for PBXProject "HueQuickStartApp-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -478,13 +483,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HueQuickStartApp-iOS/HueQuickStartApp-iOS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HueQuickStartApp-iOS/HueQuickStartApp-iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.funderdevelopment.rocketship;
 				PRODUCT_NAME = "HueQuickStartApp-iOS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -503,13 +509,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HueQuickStartApp-iOS/HueQuickStartApp-iOS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HueQuickStartApp-iOS/HueQuickStartApp-iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.funderdevelopment.rocketship;
 				PRODUCT_NAME = "HueQuickStartApp-iOS";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
